@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product ListVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ProductListVC" id="BYZ-38-t0r" customClass="ProductListVC" customModule="iOS_Exam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H02-w2-Qi3">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="7Ze-ra-ABR">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-ki-IzP">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="223"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="py6-f3-OPv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="199"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qpd-yZ-g8S">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="BYZ-38-t0r" id="erE-Im-Ppm"/>
+                                                        <outlet property="delegate" destination="BYZ-38-t0r" id="3Hw-bF-D7P"/>
+                                                    </connections>
+                                                </collectionView>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-7e-WyV">
+                                                    <rect key="frame" x="0.0" y="203" width="393" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="PY8-TM-MET"/>
+                                                    </constraints>
+                                                    <color key="pageIndicatorTintColor" systemColor="systemBlueColor"/>
+                                                    <color key="currentPageIndicatorTintColor" systemColor="systemGray2Color"/>
+                                                </pageControl>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="GDW-ki-IzP" firstAttribute="leading" secondItem="7Ze-ra-ABR" secondAttribute="leading" id="EvU-Wt-3Gk"/>
+                                        <constraint firstItem="GDW-ki-IzP" firstAttribute="top" secondItem="7Ze-ra-ABR" secondAttribute="top" id="FUT-Nw-zBI"/>
+                                        <constraint firstAttribute="trailing" secondItem="GDW-ki-IzP" secondAttribute="trailing" id="dgA-qV-QvR"/>
+                                        <constraint firstAttribute="bottom" secondItem="GDW-ki-IzP" secondAttribute="bottom" id="wiY-qe-ZPd"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FPU-gO-hPe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="O5V-zG-lQ0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H02-w2-Qi3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FbQ-gY-1OU"/>
+                            <constraint firstItem="H02-w2-Qi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ILJ-fT-s5g"/>
+                            <constraint firstItem="H02-w2-Qi3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d3T-XN-Wiq"/>
+                            <constraint firstItem="H02-w2-Qi3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fDY-kg-xgb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H02-w2-Qi3" secondAttribute="bottom" id="vdd-un-KDo"/>
+                            <constraint firstItem="H02-w2-Qi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wuz-Xi-ECw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CategoryCV" destination="py6-f3-OPv" id="CmP-v3-3SM"/>
+                        <outlet property="CutsomHeaderView" destination="7Ze-ra-ABR" id="BSM-NS-rXh"/>
+                        <outlet property="PageControl" destination="zIw-7e-WyV" id="J1U-1c-1mH"/>
+                        <outlet property="ProductListTableView" destination="H02-w2-Qi3" id="GSd-th-vwi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
